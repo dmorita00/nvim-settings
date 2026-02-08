@@ -1,5 +1,6 @@
 return {
   "nvim-tree/nvim-tree.lua",
+  dependencies = { "nvim-tree/nvim-web-devicons" },
   event = "VeryLazy",
   keys = {
     { "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "TreeToggle" },
@@ -29,6 +30,16 @@ return {
       },
       modified = {
         enable = true,
+      },
+      renderer = {
+        icons = {
+          show = {
+            file = true,
+            folder = true,
+            folder_arrow = true,
+            git = true,
+          },
+        },
       },
       on_attach = my_on_attach,
     })

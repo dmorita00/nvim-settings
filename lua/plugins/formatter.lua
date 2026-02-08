@@ -1,5 +1,6 @@
 return {
   "stevearc/conform.nvim",
+  lazy = false,
   keys = {
     { "<leader>i", "<cmd>Format<cr>", desc = "Format" },
   },
@@ -20,17 +21,20 @@ return {
         lua = { "stylua" },
         go = { "goimports", "gofmt" },
         php = { "phpcbf" },
-        javascriptreact = { "prettierd" },
-        typescriptreact = { "prettierd" },
-        javascript = { "prettierd" },
-        typescript = { "prettierd" },
-        json = { "prettierd" },
-        sql = {
-          {
-            cmd = { "sql-formatter" },
-            args = { "-i" },
-          },
-        },
+        -- biome: JS/TS/JSON/CSS
+        javascriptreact = { "biome" },
+        typescriptreact = { "biome" },
+        javascript = { "biome" },
+        typescript = { "biome" },
+        json = { "biome" },
+        css = { "biome" },
+        -- prettierd: HTML/Markdown
+        html = { "prettierd" },
+        markdown = { "prettierd" },
+        yaml = { "yamlfmt" },
+        makefile = { "bake" },
+        ruby = { "rubocop", lsp_format = "fallback" },
+        sql = { "sqlfluff" },
         terraform = { "terraform_fmt" },
         ["_"] = { "trim_whitespace" },
       },
