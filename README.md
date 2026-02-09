@@ -6,6 +6,7 @@ Personal Neovim configuration with LSP, Treesitter, and modern plugins.
 
 - **Neovim** 0.11+
 - **tree-sitter-cli** 0.26.1+
+- **ripgrep** (for Telescope live_grep)
 - **Git**
 - **C compiler** (clang or gcc)
 - **Nerd Font** (for icons)
@@ -47,7 +48,7 @@ echo -e "\uf015 \uf07c \uf121"
 
 ```bash
 # Install dependencies (macOS)
-brew install neovim tree-sitter-cli
+brew install neovim tree-sitter-cli ripgrep
 
 # Clone configuration
 git clone <repo-url> ~/.config/nvim
