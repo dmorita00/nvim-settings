@@ -3,25 +3,7 @@
 -- Global configuration for all LSP servers
 vim.lsp.config('*', {
   root_markers = { '.git' },
-  capabilities = {
-    textDocument = {
-      completion = {
-        completionItem = {
-          documentationFormat = { 'markdown', 'plaintext' },
-          snippetSupport = true,
-          preselectSupport = true,
-          insertReplaceSupport = true,
-          labelDetailsSupport = true,
-          deprecatedSupport = true,
-          commitCharactersSupport = true,
-          tagSupport = { valueSet = { 1 } },
-          resolveSupport = {
-            properties = { 'documentation', 'detail', 'additionalTextEdits' },
-          },
-        },
-      },
-    },
-  },
+  capabilities = require('blink.cmp').get_lsp_capabilities(),
 })
 
 -- Enable all LSP servers (configs loaded from lsp/ directory)
