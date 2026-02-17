@@ -28,6 +28,9 @@ return {
       git = {
         enable = true,
       },
+      filters = {
+        git_ignored = false,
+      },
       modified = {
         enable = true,
       },
@@ -39,6 +42,22 @@ return {
             folder_arrow = true,
             git = true,
           },
+        },
+      },
+      filesystem_watchers = {
+        ignore_dirs = {
+          "node_modules",
+          ".next",
+          "dist",
+          "build",
+          ".turbo",
+          ".nuxt",
+          "vendor",
+          "zig-cache",
+          "zig-out",
+          ".git",
+          "coverage",
+          "tmp",
         },
       },
       on_attach = my_on_attach,
